@@ -1,5 +1,6 @@
 package com.example.midpaper;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -23,13 +24,13 @@ public class A_Fragment extends Fragment {
         // Required empty public constructor
     }
 
-    List<Model> list;
-    List <Model> getList(){
+    ArrayList<Object> list;
+    ArrayList <Object> getList(){
         list = new ArrayList<>();
-        list.add(new Model(R.drawable.ic_launcher_foreground,R.drawable.ic_launcher_foreground,R.drawable.ic_launcher_foreground,"Hi","Haddi","2.5","Writer","7K","This is a Description"));
-        list.add(new Model(R.drawable.ic_launcher_background,R.drawable.ic_launcher_foreground,R.drawable.ic_launcher_foreground,"Hi","Haddi","2.5","Writer","7K","This is a Description"));
-        list.add(new Model(R.drawable.ic_launcher_background,R.drawable.ic_launcher_foreground,R.drawable.ic_launcher_foreground,"Hi","Haddi","2.5","Writer","7K","This is a Description"));
-        list.add(new Model(R.drawable.ic_launcher_background,R.drawable.ic_launcher_foreground,R.drawable.ic_launcher_foreground,"Hi","Haddi","2.5","Writer","7K","This is a Description"));
+        list.add(new Model(R.drawable.sci_fri,R.drawable.ic_launcher_foreground,R.drawable.ic_launcher_foreground,"Hi","Haddi","2.5","Writer","7K","This is a Description"));
+        list.add(new Model(R.drawable.fantacy,R.drawable.ic_launcher_foreground,R.drawable.ic_launcher_foreground,"Hi","Haddi","2.5","Writer","7K","This is a Description"));
+        list.add(new Model(R.drawable.advanture,R.drawable.ic_launcher_foreground,R.drawable.ic_launcher_foreground,"Hi","Haddi","2.5","Writer","7K","This is a Description"));
+        list.add(new Model(R.drawable.action,R.drawable.ic_launcher_foreground,R.drawable.ic_launcher_foreground,"Hi","Haddi","2.5","Writer","7K","This is a Description"));
         return list;
     }
 
@@ -48,4 +49,6 @@ public class A_Fragment extends Fragment {
 
         return view;
     }
+
+
 }

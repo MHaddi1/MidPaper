@@ -1,23 +1,29 @@
 package com.example.midpaper;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.SearchView;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AdapterFragment extends RecyclerView.Adapter<AdapterFragment.ViewHolder> {
-    List<Model> List;
+    ArrayList<Object> list;
     Context context;
-    public AdapterFragment(List<Model> List, Context context){
-        this.List=List;
+
+    public AdapterFragment(ArrayList<Object> list, Context context){
+        this.list=list;
         this.context=context;
+
     }
 
     @NonNull
@@ -30,15 +36,26 @@ public class AdapterFragment extends RecyclerView.Adapter<AdapterFragment.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull AdapterFragment.ViewHolder holder, int position) {
-        holder.img.setImageResource(List.get(position).getImage());
+
+       Model model = (Model) list.get(position);
+       holder.img.setImageResource(model.getImage());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(context,SecondScreen.class);
+                i.putExtra("image", model.getImage());
+                context.startActivity(i);
+
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
-        return List.size();
+        return list.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder{
         ImageView img;
         CardView card;
         public ViewHolder(@NonNull View itemView) {
@@ -47,5 +64,9 @@ public class AdapterFragment extends RecyclerView.Adapter<AdapterFragment.ViewHo
             card = itemView.findViewById(R.id.card);
 
         }
+
+
+
     }
+
 }
