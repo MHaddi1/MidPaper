@@ -27,10 +27,10 @@ public class A_Fragment extends Fragment {
     ArrayList<Object> list;
     ArrayList <Object> getList(){
         list = new ArrayList<>();
-        list.add(new Model(R.drawable.sci_fri,R.drawable.ic_launcher_foreground,R.drawable.ic_launcher_foreground,"Hi","Haddi","2.5","Writer","7K","This is a Description"));
-        list.add(new Model(R.drawable.fantacy,R.drawable.ic_launcher_foreground,R.drawable.ic_launcher_foreground,"Hi","Haddi","2.5","Writer","7K","This is a Description"));
-        list.add(new Model(R.drawable.advanture,R.drawable.ic_launcher_foreground,R.drawable.ic_launcher_foreground,"Hi","Haddi","2.5","Writer","7K","This is a Description"));
-        list.add(new Model(R.drawable.action,R.drawable.ic_launcher_foreground,R.drawable.ic_launcher_foreground,"Hi","Haddi","2.5","Writer","7K","This is a Description"));
+        list.add(new Model(R.drawable.sci_fri,R.drawable.ic_baseline_star_rate_24,R.drawable.ic_launcher_foreground,"DUNE","Haddi","2.5","Writer","7K","This is a Description"));
+        list.add(new Model(R.drawable.fantacy,R.drawable.ic_baseline_star_rate_24,R.drawable.ic_launcher_foreground,"First Bite","Haddi","2.5","Writer","7K","This is a Description"));
+        list.add(new Model(R.drawable.advanture,R.drawable.ic_baseline_star_rate_24,R.drawable.ic_launcher_foreground,"The Night of Danger","Haddi","2.5","Writer","7K","This is a Description"));
+        list.add(new Model(R.drawable.action,R.drawable.ic_baseline_star_rate_24,R.drawable.ic_launcher_foreground,"Targeted Killing","Haddi","2.5","Writer","7K","This is a Description"));
         return list;
     }
 
